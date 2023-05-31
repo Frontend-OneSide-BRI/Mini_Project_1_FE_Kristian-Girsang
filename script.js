@@ -38,21 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
         var rowContainer = document.createElement("div");
         rowContainer.className = "row";
 
-        images.forEach(function (image, index) {
+        images.map(function (image, index) {
           var card = document.createElement("div");
           card.className = "col-lg-4 col-md-6 col-sm-12 my-3";
-          card.innerHTML = `
-            <div class="card">
+          card.innerHTML =
+            `<div class="card">
               <img src="${image.url}" class="card-img compressed-img" alt="${image.name}">
             </div>`;
 
           rowContainer.appendChild(card);
 
-          // After every 3 image cards, add the row container to the gallery and create a new row container
-          if ((index + 1) % 3 === 0) {
+          // Determine the number of image cards per row based on the screen size
+          var cardsPerRow = 3;
+          if (window.innerWidth < 992) {
+            cardsPerRow = 2;
+          }
+
+          // After every 'cardsPerRow' image cards, add the row container to the gallery and create a new row container
+          if ((index + 1) % cardsPerRow === 0) {
             imageGallery.appendChild(rowContainer);
             rowContainer = document.createElement("div");
-            rowContainer.className = "row justify-content-between";
+            rowContainer.className = "row";
           }
         });
 
@@ -60,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (images.length % 3 !== 0) {
           imageGallery.appendChild(rowContainer);
         }
+
 
         // Open modal and show image details on image click
         var compressedImgs = document.querySelectorAll(".compressed-img");

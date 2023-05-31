@@ -11,10 +11,10 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="container-fluid navbar navbar-expand-md navbar-dark bg-dark sticky-top">
     <div class="container">
       <div class="navbar-brand-container">
-        <a class="navbar-brand logo" href="index.html">
+        <a class="navbar-brand logo" href="../index.html">
           <span class="text-primary">imagi</span>-<span class="text-danger">W</span>
         </a>
       </div>
@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active fw-bold">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/gallery.html">Gallery</a>
@@ -116,37 +116,30 @@
     <div class="border p-5 my-3 rounded-4">
       <h1 class="text-center mt-3 fw-bolder">Welcome to
         <span class="text-primary">imagi</span>-<span class="text-danger">W</span> a.k.a Imagination World</h1>
-      <h3 id="typing-text" class="text-center my-3 fw-bold">We will show you the beauty of the world that you want to see.</h3>
+      <h3 id="typing-text" class="text-center my-3 fw-bold">We will show you the beauty of the world that you want to
+        see.</h3>
     </div>
 
-    <div class="row mt-5">
-      <div class="col-lg-6 mb-3">
-        <div class="card">
-          <img src="category1.jpg" class="card-img-top" alt="Category 1">
-          <div class="card-body">
-            <h5 class="card-title">Category 1</h5>
-            <p class="card-text">Description for Category 1</p>
-            <a href="#" class="btn btn-primary">View More</a>
-          </div>
-        </div>
+    <!-- Image Cards -->
+    <div class="container text-center">
+      <div class="container row" id="some-image-gallery" data-bs-toggle="modal" data-bs-target="#image-modal">
+        <!-- Some images will be dynamically loaded here -->
       </div>
-      <div class="col-lg-6 mb-3">
-        <div class="card">
-          <img src="category2.jpg" class="card-img-top" alt="Category 2">
-          <div class="card-body">
-            <h5 class="card-title">Category 2</h5>
-            <p class="card-text">Description for Category 2</p>
-            <a href="#" class="btn btn-primary">View More</a>
-          </div>
-        </div>
-      </div>
+      <button type="button"
+        class="btn btn-outline-dark filter-button text-capitalize rounded overflow-hidden text-center border transition active">
+        <a href="/pages/gallery.html">View more</a>
+      </button>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
-  </script>
-  <script src="script.js"></script>
+    <footer class="container-fluid absolute-bottom bg-dark text-white text-center py-3">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

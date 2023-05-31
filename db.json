@@ -21,7 +21,7 @@
         "id": 4,
         "name": "Image 4",
         "category": "People",
-        "url": "https://source.unsplash.com/random/?random?people",
+        "url": "https://source.unsplash.com/random/800x600?peoples",
         "description": "Description for Image 4"
     }, {
         "id": 5,
@@ -39,7 +39,7 @@
         "id": 7,
         "name": "Image 7",
         "category": "People",
-        "url": "https://source.unsplash.com/random/random?people",
+        "url": "https://source.unsplash.com/random/800x600?peoples",
         "description": "Description for Image 7"
     }, {
         "id": 8,

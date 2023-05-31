@@ -26,25 +26,17 @@
   object-fit: cover;
 }
 
-.btn-container {
-  overflow-x: hidden;
-  white-space: nowrap;
-}
-
-
-.filter-button.active {
-  background-color: #212529;
-}
-
-.filter-button {
+.btn {
   border-radius: 20px;
   padding: 8px 16px;
   transition: background-color 0.3s ease;
 }
 
-.filter-button.active {
-  background-color: #212529;
+.btn-container {
+  overflow-x: hidden;
+  white-space: nowrap;
 }
+
 
 @media (max-width: 767px) {
   .slide-img {
