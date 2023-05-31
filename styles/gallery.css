@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.slide-img {
+  height: 45vh;
+  object-fit: cover;
+}
+
+.btn-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.filter-button.active {
+  background-color: #212529;
+}
+
+.filter-button {
+  border-radius: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button.active {
+  background-color: #212529;
+}
+
+@media (max-width: 767px) {
+  .slide-img {
+    height: 30vh;
+  }
+}
+
+/* CSS animation for typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* CSS animation for blinking cursor */
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+
+.carousel-indicators::marker {
+  display: none;
+}
+
+.card:hover {
+  cursor: pointer;
+}
