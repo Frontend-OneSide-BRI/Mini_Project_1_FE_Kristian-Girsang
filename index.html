@@ -109,14 +109,32 @@
       <div class="container row" id="some-image-gallery" data-bs-toggle="modal" data-bs-target="#image-modal">
         <!-- Some images will be dynamically loaded here -->
       </div>
-      <button type="button" class="btn btn-outline-dark filter-button text-capitalize rounded overflow-hidden text-center border transition active py-3 px-5 my-2">
+      <button type="button"
+        class="btn btn-outline-dark filter-button text-capitalize rounded overflow-hidden text-center border transition active py-3 px-5 my-2">
         <a href="/pages/gallery.html" class="link-unstyled">View more</a>
       </button>
-      
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="image-modal" tabindex="-1" aria-labelledby="image-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="image-modal-label">Image Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modal-image" src="" class="img-fluid" alt="">
+            <h5 id="modal-title"></h5>
+            <p id="modal-description"></p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="container-fluid absolute-bottom bg-dark text-white text-center py-3">
-      <p>&copy; 2023 <span class="text-primary">imagi</span>-<span class="text-danger">W</span>. All rights reserved.</p>
+      <p>&copy; 2023 <span class="text-primary">imagi</span>-<span class="text-danger">W</span>. All rights reserved.
+      </p>
     </footer>
 
 
