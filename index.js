@@ -37,10 +37,28 @@ document.addEventListener("DOMContentLoaded", function () {
           card.className = "col-lg-4 col-md-6 col-sm-12 my-3";
           card.innerHTML =
             `<div class="card">
-              <img src="${image.url}" class="card-img compressed-img" alt="${image.name}">
+              <img src="${image.url}" class="card-img compressed-img" alt="${image.name}" data-bs-toggle="modal" data-bs-target="#image-modal" data-image-url="${image.url}" data-image-title="${image.title}" data-image-description="${image.description}">
             </div>`;
 
           someImageGallery.appendChild(card);
+        });
+
+        // Attach event listeners to the modal-triggering images
+        var modalTriggerImages = document.querySelectorAll(".compressed-img");
+        modalTriggerImages.forEach(function (image) {
+          image.addEventListener("click", function () {
+            var modalImage = document.getElementById("modal-image");
+            var modalTitle = document.getElementById("modal-title");
+            var modalDescription = document.getElementById("modal-description");
+
+            var imageUrl = this.getAttribute("data-image-url");
+            var imageTitle = this.getAttribute("data-image-title");
+            var imageDescription = this.getAttribute("data-image-description");
+
+            modalImage.src = imageUrl;
+            modalTitle.textContent = imageTitle;
+            modalDescription.textContent = imageDescription;
+          });
         });
       }
     }
