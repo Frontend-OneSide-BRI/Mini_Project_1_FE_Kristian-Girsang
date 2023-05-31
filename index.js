@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
           someImageGallery.appendChild(card);
         });
 
-        // Attach event listeners to the modal-triggering images
+        // Open modal and show image details on image click
         var modalTriggerImages = document.querySelectorAll(".compressed-img");
         modalTriggerImages.forEach(function (image) {
           image.addEventListener("click", function () {
@@ -51,13 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
             var modalTitle = document.getElementById("modal-title");
             var modalDescription = document.getElementById("modal-description");
 
-            var imageUrl = this.getAttribute("data-image-url");
-            var imageTitle = this.getAttribute("data-image-title");
-            var imageDescription = this.getAttribute("data-image-description");
+            var imageSrc = this.getAttribute("src");
+            var imageAlt = this.getAttribute("alt");
+            var image = images.find(function (img) {
+              return img.url === imageSrc && img.name === imageAlt;
+            });
 
-            modalImage.src = imageUrl;
-            modalTitle.textContent = imageTitle;
-            modalDescription.textContent = imageDescription;
+            modalImage.setAttribute("src", image.url);
+            modalTitle.textContent = image.name;
+            modalDescription.textContent = image.description;
+            document.getElementById("image-modal").classList.add("show");
           });
         });
       }
